@@ -29,7 +29,7 @@ export AIRFLOW_HOME=/Users/My_Username/airflow_learning/airflow
 cd
 
 # initialize the database
-airflow initdb
+airflow db init
 
 # create Apache Airflow user to solve WARNING: No user yet created, use flask fab command to do it.
 # provide your user login credentials and save
