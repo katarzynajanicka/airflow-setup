@@ -1,4 +1,4 @@
-# open the Terminal on Mac and get to the root folder
+# open Terminal on my Mac and get to the root folder
 cd ~
 
 # create airflow_learning directory
@@ -11,9 +11,9 @@ sudo -H pip3 install virtualenv
 virtualenv -p python3 airflow_venv
 source airflow_venv/bin/activate
 
-# should see (airflow_venv) before your root folder name in terminal
+# should see (airflow_venv) before the root folder name in Terminal
 
-# install airflow in this virtual environment by below command-
+# install airflow in this virtual environment
 sudo -H pip3 install apache-airflow
 
 # create a new directory in this directory and name it airflow
@@ -51,13 +51,14 @@ source airflow_venv/bin/activate
 # set the path once again, - replace My_Username with relevant user name
 export AIRFLOW_HOME=/Users/My_Username/airflow_learning/airflow
 
-# start the scheduler in a new window
+# start the scheduler, open a new Terminal window
 airflow scheduler
 
-# check what is happening on 8080
+# check what is happening on port 8080
 sudo lsof -i :8080 | grep LISTEN
 
-# start the web server, default port is 8080 but I already have some processes running on 8080, hence the need to choose a different port
+# start the web server, use the old Terminal window
+# default port for Airflow is 8080 but I already have some processes running on 8080, hence the need to choose a different port
 airflow webserver -p 3000
 
-# visit localhost:3000 in the browser and log in
+# visit "localhost:3000" in the browser and log in
