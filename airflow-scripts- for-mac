@@ -54,6 +54,9 @@ export AIRFLOW_HOME=/Users/My_Username/airflow_learning/airflow
 # start the scheduler in a new window
 airflow scheduler
 
+# check what is happening on 8080
+sudo lsof -i :8080 | grep LISTEN
+
 # start the web server, default port is 8080 but I already have some processes running on 8080, hence the need to choose a different port
 airflow webserver -p 3000
 
