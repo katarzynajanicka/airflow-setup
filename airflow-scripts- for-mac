@@ -32,8 +32,17 @@ cd
 airflow db init
 
 # create Apache Airflow user to solve WARNING: No user yet created, use flask fab command to do it.
-# provide your user login credentials and save
 FLASK_APP=airflow.www.app flask fab create-admin
+
+# provide your user login credentials and save
+# Username [admin]: 
+# User first name [admin]: 
+# User last name [user]: 
+# Email [admin@fab.org]: 
+# Password: 
+# Repeat for confirmation: 
+
+# you should see: 'Recognized Database Authentications. Admin User admin created.'
 
 # go to the airflow_learning folder in new terminal and activate the virtual environment
 cd airflow_learning
