@@ -4,7 +4,7 @@ cd ~
 # create airflow_learning directory
 mkdir airflow_learning && cd airflow_learning
 
-# install python virtual environment-
+# install python virtual environment
 sudo -H pip3 install virtualenv
 
 # create virtual environment and activate it
