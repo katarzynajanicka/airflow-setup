@@ -51,14 +51,14 @@ source airflow_venv/bin/activate
 # set the path once again, - replace My_Username with relevant user name
 export AIRFLOW_HOME=/Users/My_Username/airflow_learning/airflow
 
-# start the scheduler, open a new Terminal window
-airflow scheduler
-
 # check what is happening on port 8080
 sudo lsof -i :8080 | grep LISTEN
 
 # start the web server, use the old Terminal window
 # default port for Airflow is 8080 but I already have some processes running on 8080, hence the need to choose a different port
 airflow webserver -p 3000
+
+# start the scheduler, open a new Terminal window
+airflow scheduler
 
 # visit "localhost:3000" in the browser and log in
